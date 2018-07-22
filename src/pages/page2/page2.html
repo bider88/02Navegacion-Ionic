@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>page2</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <h1>Enviando con evento</h1>
+
+  <ion-list>
+    <ion-item *ngFor="let mutan of mutants" (click)="goTo(mutan)">
+
+      {{ mutan.name }}
+
+    </ion-item>
+  </ion-list>
+
+  <h1>Enviando con html</h1>
+
+  <ion-list>
+    <ion-item *ngFor="let mutan of mutants" [navPush]="page3" [navParams]="{ 'mutan': mutan }">
+
+      {{ mutan.name }}
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>

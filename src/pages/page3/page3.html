@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>page3</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h3 text-center>{{ mutan.name }}</h3>
+  <p>{{ mutan.power }}</p>
+
+  <button ion-button color="primary" block (click)="goToBack()">Regresar con evento</button>
+
+  <button ion-button color="secondary" block (click)="goToRoot()">Regresar al root</button>
+
+  <button ion-button color="danger" block navPop>Regresar atrás sin evento</button>
+
+</ion-content>
