@@ -22,6 +22,8 @@ export class SettingsPage {
   ) {
   }
 
+  user: any;
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad SettingsPage');
   }
@@ -35,7 +37,7 @@ export class SettingsPage {
     modal.present();
     modal.onDidDismiss(param => {
       if (param) {
-        console.log(param);
+        this.user = param;
       }
     })
   }

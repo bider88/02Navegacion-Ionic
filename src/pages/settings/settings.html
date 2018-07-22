@@ -15,5 +15,10 @@
   <button ion-button block (click)="enablePrincipal()">Activar principal</button>
 
   <button ion-button block color="purple" (click)="showModal()">Mostrar modal</button>
+  <div *ngIf="user">
+    <h2>Estos son los parámetros del modal</h2>
+    <p>{{ user.name }}</p>
+    <p>{{ user.age }}</p>
+  </div>
 
 </ion-content>
